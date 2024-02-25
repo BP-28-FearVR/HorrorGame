@@ -282,6 +282,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 333109432394779398, guid: 1400ad8074815c241892f451e09f3fa4, type: 3}
+      propertyPath: m_margin.y
+      value: -1.2380714
+      objectReference: {fileID: 0}
+    - target: {fileID: 333109432394779398, guid: 1400ad8074815c241892f451e09f3fa4, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1973284914890133400, guid: 1400ad8074815c241892f451e09f3fa4, type: 3}
       propertyPath: sceneChanger
       value: 
@@ -289,6 +297,23 @@ PrefabInstance:
     - target: {fileID: 1973284914890133400, guid: 1400ad8074815c241892f451e09f3fa4, type: 3}
       propertyPath: targetScene.m_SceneName
       value: Scene1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973284914890133400, guid: 1400ad8074815c241892f451e09f3fa4, type: 3}
+      propertyPath: textPageList.Array.data[0]
+      value: "\rWelcome to our experiment.\n\nIn this VR experience you will encounter
+        an horror scenario, which might cause you the feeling of fear. \r\n\nPlease
+        point to the \">\" and pressing the button beneath your index finger.\n\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973284914890133400, guid: 1400ad8074815c241892f451e09f3fa4, type: 3}
+      propertyPath: textPageList.Array.data[2]
+      value: "There are objects next to you which you can interact with. \n\nTo grab
+        these objects, press the button beneath your middle finger.  Release it when
+        you wish to let go of the object. If you release the button while moving
+        your hand, you will throw the object."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973284914890133400, guid: 1400ad8074815c241892f451e09f3fa4, type: 3}
+      propertyPath: textPageList.Array.data[3]
+      value: If you have no other questions, please click start.
       objectReference: {fileID: 0}
     - target: {fileID: 1973284914890133400, guid: 1400ad8074815c241892f451e09f3fa4, type: 3}
       propertyPath: onPageChange.m_PersistentCalls.m_Calls.Array.size
@@ -425,6 +450,26 @@ PrefabInstance:
     - target: {fileID: 5939709517378100934, guid: 1400ad8074815c241892f451e09f3fa4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987434361385399879, guid: 1400ad8074815c241892f451e09f3fa4, type: 3}
+      propertyPath: m_text
+      value: Introduction - Fear VR - Horror Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987434361385399879, guid: 1400ad8074815c241892f451e09f3fa4, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987434361385399879, guid: 1400ad8074815c241892f451e09f3fa4, type: 3}
+      propertyPath: m_margin.z
+      value: -102.40307
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987434361385399879, guid: 1400ad8074815c241892f451e09f3fa4, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7470867328068197842, guid: 1400ad8074815c241892f451e09f3fa4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2343,8 +2388,8 @@ SceneRoots:
   - {fileID: 299639869}
   - {fileID: 1249617921}
   - {fileID: 988287706}
+  - {fileID: 395914418}
   - {fileID: 1378362589}
   - {fileID: 149026458}
-  - {fileID: 395914418}
-  - {fileID: 2641291431957372101}
   - {fileID: 3804218271934796499}
+  - {fileID: 2641291431957372101}
