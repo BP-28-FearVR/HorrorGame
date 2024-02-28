@@ -902,7 +902,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868011417534876377}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 919e39492806b334982b6b84c90dd927, type: 3}
   m_Name: 
@@ -2453,7 +2453,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -7229917235241773598, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  recenterPointTransform: {fileID: 0}
+  recenterPoint: {fileID: 0}
 --- !u!1 &3856778413706935048
 GameObject:
   m_ObjectHideFlags: 0
@@ -2685,7 +2685,7 @@ MonoBehaviour:
   m_Move: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_UIScroll: {fileID: -6756787485274679044, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_SmoothMotionEnabled: 0
-  m_SmoothTurnEnabled: 1
+  m_SmoothTurnEnabled: 0
   m_UIScrollingEnabled: 1
 --- !u!114 &87087652629106499
 MonoBehaviour:
@@ -4804,11 +4804,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69efd5124b29aa469456b9a0e9bf30f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.15
   layerMask:
     serializedVersion: 2
     m_Bits: 2048
   invisibleFloor: {fileID: 0}
+  radius: 0.15
+  maxDistance: 3
+  sphereCastDirection: {x: 0, y: -1, z: 0}
 --- !u!1 &5536759829629227498
 GameObject:
   m_ObjectHideFlags: 0
