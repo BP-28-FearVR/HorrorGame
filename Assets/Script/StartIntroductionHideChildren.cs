@@ -7,17 +7,23 @@ public class StartIntroductionHideChildren : MonoBehaviour
     [Tooltip("Page on which the children will be shown.")]
     [SerializeField] private int actionPage;
 
+    //Have Itemes been once active
+    private bool _hasBeenActivated;
+
 
     //Hide Children on start
     public void Start()
     {
+        _hasBeenActivated = false;
         SetActiveChildren(false);
     }
 
     //Show children based on Page change
     public void OnPageChangeEvent(int newPage)
     {
-        SetActiveChildren(newPage >= actionPage);
+        bool shouldBeActive = _hasBeenActivated || newPage >= actionPage;
+        SetActiveChildren(shouldBeActive);
+        _hasBeenActivated = shouldBeActive;
     }
 
     //Sets the active state of the Children to the value of 'shouldBeActive'
