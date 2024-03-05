@@ -2305,7 +2305,6 @@ GameObject:
   - component: {fileID: 4284212240379483871}
   - component: {fileID: 5639304850091777188}
   - component: {fileID: 2166925173888196101}
-  - component: {fileID: 3752973851949079116}
   - component: {fileID: 6807516361311028264}
   m_Layer: 2
   m_Name: XR Origin (XR Rig)
@@ -2361,7 +2360,7 @@ CharacterController:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -2370,7 +2369,7 @@ CharacterController:
   m_Height: 0.5
   m_Radius: 0.22
   m_SlopeLimit: 45
-  m_StepOffset: 0.5
+  m_StepOffset: 0.25
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
@@ -2417,18 +2416,6 @@ MonoBehaviour:
   m_MotionControllerModeEnded:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &3752973851949079116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3601533994270973645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dddbc5696a98334089f477769e18bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6807516361311028264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4553,7 +4540,6 @@ Transform:
   - {fileID: 3597394351468017994}
   - {fileID: 6711334117873619888}
   - {fileID: 5069804545764655251}
-  - {fileID: 2735555702699506781}
   m_Father: {fileID: 428596729425472313}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &5045837615180350229
@@ -4760,57 +4746,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!1 &5477031774551712537
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2735555702699506781}
-  - component: {fileID: 4257256172164824854}
-  m_Layer: 2
-  m_Name: FloorDetection
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2735555702699506781
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5477031774551712537}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2898250589281047763}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4257256172164824854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5477031774551712537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e69efd5124b29aa469456b9a0e9bf30f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 2048
-  invisibleFloor: {fileID: 0}
-  radius: 0.15
-  maxDistance: 3
-  sphereCastDirection: {x: 0, y: -1, z: 0}
 --- !u!1 &5536759829629227498
 GameObject:
   m_ObjectHideFlags: 0
