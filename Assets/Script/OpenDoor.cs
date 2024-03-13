@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class OpenDoor : MonoBehaviour
@@ -13,7 +14,7 @@ public class OpenDoor : MonoBehaviour
     [SerializeField] private float openRotation = 84.0f;
 
     [Tooltip("The time in seconds after which the door can be opened")]
-    [SerializeField] private float timeUntilDoorOpens;
+    [SerializeField] private float timeUntilDoorOpens = 0;
 
     [Tooltip("The time in seconds that Outline stays on/off. (<= 0 to disable blinking)")]
     [SerializeField] private float blinkToggleInterval = 2;
@@ -24,10 +25,54 @@ public class OpenDoor : MonoBehaviour
     [Tooltip("The outline object for the outline animation.")]
     [SerializeField] private Outline outline;
 
+    [Tooltip("The UI the remaining time should be printed to")]
+    [SerializeField] private TextMeshProUGUI timerTextUI;
+
     private bool _isOutlineOn = false;
     private bool _isDoorMoving = false;
     private bool _isDoorOpened = false;
 
+    private float _remainingTime;
+
+    void Start()
+    {
+        // check if timeUntilDoorOpens is a valid time for this use case
+        if (timeUntilDoorOpens < 0) 
+        { 
+            timeUntilDoorOpens = 0;
+        } else if(timeUntilDoorOpens > 5999)
+        {
+            //99 minutes and 59 seconds convert to 5999 seconds
+            timeUntilDoorOpens = 5999;
+        }
+        if(timerTextUI != null)
+        {
+            _remainingTime = timeUntilDoorOpens;
+            printRemainingTime();
+        }
+    }
+
+    private void countDownTime()
+    {
+        // Decrease time left by 1 second as this function is called every second
+        _remainingTime -= 1f;
+        if (_remainingTime >= 0)
+        {
+            printRemainingTime();
+        }
+        if (_remainingTime <= 0)
+        {
+            timerTextUI.color = Color.green;
+            CancelInvoke("countDownTime");
+        }
+    }
+
+    private void printRemainingTime()
+    {
+        int minutes = Mathf.FloorToInt(_remainingTime / 60);
+        int seconds = Mathf.FloorToInt(_remainingTime % 60);
+        timerTextUI.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
 
     //Toggles the Outline on and off.
     private void ToggleOutline()
@@ -84,6 +129,19 @@ public class OpenDoor : MonoBehaviour
     public void StartTriggerTimer()
     {
         Invoke("OnTimerDone", timeUntilDoorOpens);
+        if(timerTextUI != null)
+        {
+            // calls a function that counts down the time by 1 second every second after 1 second
+            InvokeRepeating("countDownTime", 1, 1);
+        }
+    }
+
+    // For use by the dev menu
+    public void setTimeByDevMenu(float newRemainingTime)
+    {
+        _remainingTime = newRemainingTime;
+        CancelInvoke("OnTimerDone");
+        Invoke("OnTimerDone", _remainingTime);
     }
 
     // Opens door if closed and closes door if opened
