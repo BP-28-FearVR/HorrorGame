@@ -24,4 +24,12 @@ public class QuestionnaireInvoker : MonoBehaviour
         relaxUI.SetActive(false);
         questionnaire.SetActive(true);
     }
+
+    // For use by the dev menu
+    public void setTimeByDevMenu(float newSecondsToWait)
+    {
+        secondsToWait = newSecondsToWait;
+        CancelInvoke("TriggerQuestionnaire");
+        Invoke("TriggerQuestionnaire", secondsToWait);
+    }
 }

@@ -710,6 +710,24 @@
                     "processors": "",
                     "interactions": "Hold(duration=1)",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Y",
+                    "type": "Button",
+                    "id": "584bd7b2-6fc8-4ae7-b21e-ef23bb3553e8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "X",
+                    "type": "Button",
+                    "id": "a246f355-faac-464a-923c-3e13a7e2c9ef",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -864,6 +882,28 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "MenuButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "743b68d5-1c9e-4852-b188-a945774871cc",
+                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Y",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4c94519c-6ea4-4468-bff3-f17d6ac8bc19",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "X",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -2477,6 +2517,134 @@
                     "processors": "",
                     "groups": "",
                     "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "XRi RightHand Konami",
+            "id": "5d33f642-2ced-4ae2-8919-99d177d0a81d",
+            "actions": [
+                {
+                    "name": "UP",
+                    "type": "Value",
+                    "id": "06f25bbc-ee99-47ae-a023-15a5101cd46f",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "LEFT",
+                    "type": "Value",
+                    "id": "2c209f3c-bbf2-4495-b189-8c7e599b143b",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "RIGHT",
+                    "type": "Value",
+                    "id": "6f2858c3-44fc-4ce8-ba83-9ad6c3cdc367",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "DOWN",
+                    "type": "Value",
+                    "id": "614159d5-f9a8-4958-aed0-b9accddf80bb",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "B",
+                    "type": "Button",
+                    "id": "7a046a66-cc44-4f07-848f-15c3a4f1c983",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "A",
+                    "type": "Button",
+                    "id": "cbe33f83-efc7-4146-8a5d-981ffacbf6bb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6d96da5b-fd4a-4e38-9386-62a48b90823e",
+                    "path": "<XRController>{RightHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5f7d3f91-b3a6-41c6-94e2-2af8ba0d1346",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ec9e5dd6-e78c-4cb5-aae3-b904cb8db347",
+                    "path": "<XRController>{RightHand}/Primary2DAxis",
+                    "interactions": "Sector(directions=8,sweepBehavior=2)",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "LEFT",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c8439117-ecdb-4b70-b220-6d14f57028c9",
+                    "path": "<XRController>{RightHand}/Primary2DAxis",
+                    "interactions": "Sector(directions=4,sweepBehavior=2)",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "RIGHT",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "83488b87-5c16-4e91-8317-2a1dcdd112ef",
+                    "path": "<XRController>{RightHand}/Primary2DAxis",
+                    "interactions": "Sector(directions=2,sweepBehavior=2)",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "DOWN",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3f345e2a-5878-442c-805b-4762315dba40",
+                    "path": "<XRController>{RightHand}/Primary2DAxis",
+                    "interactions": "Sector(directions=1,sweepBehavior=2)",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "UP",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

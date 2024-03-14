@@ -601,6 +601,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f67cb3bdf0a85ce44afc3dfcf5ecc555, type: 3}
+--- !u!114 &988187717 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8754550687254103289, guid: f67cb3bdf0a85ce44afc3dfcf5ecc555, type: 3}
+  m_PrefabInstance: {fileID: 988187716}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c34f2b78eda2d5d4284f9dff7d2307b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1211069147 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4324426479624091419, guid: d3b1b67b377c18b4f9bd3c9b70208519, type: 3}
@@ -684,6 +695,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1612431860067082128, guid: 9c1b84e14e18c6547a457267379bc33b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 988187717}
+    - target: {fileID: 1612431860067082128, guid: 9c1b84e14e18c6547a457267379bc33b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setTimeByDevMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612431860067082128, guid: 9c1b84e14e18c6547a457267379bc33b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: QuestionnaireInvoker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612431860067082128, guid: 9c1b84e14e18c6547a457267379bc33b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028134890420347038, guid: 9c1b84e14e18c6547a457267379bc33b, type: 3}
+      propertyPath: m_text
+      value: Invoke Questionaire
+      objectReference: {fileID: 0}
     - target: {fileID: 5568545084359665148, guid: 9c1b84e14e18c6547a457267379bc33b, type: 3}
       propertyPath: recenterPoint
       value: 
